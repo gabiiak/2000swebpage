@@ -1,0 +1,17 @@
+body{
+    padding: 5%;
+    background-color: rgb(216, 198, 224);
+}
+.main-container{
+    position: relative;
+    border: 2px solid red;
+    width: 100%;
+    height: 390px;
+    display: grid;
+    grid-template-columns: auto;
+}
+.left-container{
+    border: 2px solid blue;
+    width: 50%;
+
+}
