@@ -1,68 +1,147 @@
+:root{
+    --bar-gradient: linear-gradient(90deg,rgba(199, 64, 181, 1) 0%, rgba(217, 130, 205, 1) 16%, rgba(145, 22, 139, 1) 30%, rgba(153, 86, 153, 1) 50%, rgba(175, 11, 181, 1) 71%, rgba(209, 113, 207, 1) 85%, rgba(153, 29, 145, 1) 100%);
+    --my-color-magenta:rgb(169, 11, 169);
+    --my-color-green:rgb(192, 255, 196);
+}
 body{
-    background-image: url(https://i.pinimg.com/736x/30/d1/eb/30d1eb68e7ec9c1cd249a774050bab49.jpg);
-    background-size: 100%;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 120%;
-    display: grid;
-    place-content: center;
+    background-image: url(https://i.pinimg.com/736x/3c/33/46/3c334658bf58cb09c3b1e224030f603f.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Cascadia Code", sans-serif; /*cascadia code para hacerme el interesante xddd*/
+    font-size: medium;
 }
 .main{
     position:relative;
-    padding: 3%;
-    border: 2px solid black;
-    max-width: 350px;
+    padding: 10px 3%;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 320px;
     margin: 100 auto;
-    background-color: aliceblue;
     display: grid;
+}
+.top-bar{ /*mi h2*/
+    margin: 0;
+    padding-left: 7px;
+    background: var(--bar-gradient);
+    font-style: normal;
+    color: white;
+    border-radius: 2px;
+    font-family: "Bitcount Grid Double", system-ui;
+    border-bottom: 3px solid var(--my-color-magenta);
+    font-size: medium;
 }
 
 /*left-container*/
 .left-container{
-    /*border: 2px solid yellow;*/
-    padding: 2%;
+    padding: 10px 1rem;
 }
 .banner{
-    border: 3px solid blue;
-    border-top-left-radius: 4%;
-    border-top-right-radius: 4%;
-    height: 70px;
+    border: 3px solid var(--my-color-magenta);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 160px;
+    background-color: pink;
+    overflow: hidden;
+}
+.banner img{
+    width: 100%;
 }
 .profile{
+    margin-top: 16px;
     display: grid;
-    border: 2px solid brown;
-    gap: 2px;
+    grid-template-columns: 1fr 2fr;
+    border: 3px solid var(--my-color-magenta);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: pink;
 }
-.name{
-    border: 2px solid red;
+.profile .top-bar{
     grid-column: 1/3;
 }
 .picture{
-    border: 2px solid red;
-    width: 120px;
-    height: 120px;
+    margin: 10px 10px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(3, 239, 247);
+    border-radius: 5px;
 }
 .status{
-    border: 2px solid black;
-    grid-column: span 2;
+    position: relative;
+    padding: 3px;
+    margin: 20px 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: white;
+}
+.status p{
+    margin: 0;
+}
+.status::after{ /*triangulito*/
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 19px;
+    margin-left: -35px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 15px solid white;
 }
 
 
 
 /*right-container*/
 .right-container{
-    border: 2px solid green;
-    padding: 2%;
-}
-.about{
-    border:2px solid red;
+    padding: 10px 1rem;
 }
 .links{
+    margin: 0;
     display: grid;
+    border: 3px solid var(--my-color-magenta);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: pink;
+}
+.links a{
+    display: flex;
+    border-radius: 5px;
+    margin: 5px 5px;
+    font-family: "Bitcount Grid Double", system-ui;
+    color: white;
+    justify-content: center;
+}
+.about{
+    margin-top: 16px;
+    border:2px solid var(--my-color-magenta);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: pink;
+}
+.about p{
+    margin: 0;
 }
 
-.l1{
-    border: 2px solid red;
-}
 .cosplay{
-    border: 2px solid black;
+    margin-top: 16px;
+    border: 2px solid var(--my-color-magenta);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: pink;
+}
+.cosplay p{
+    margin: 0;
+}
+
+/*gifs que están en la raíz*/
+.heart-cat-gif{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 300px;
+    left: 270px;
+}
+.flowers-gif{
+    width: 100%;
 }
