@@ -4,7 +4,7 @@
     --my-color-green:rgb(192, 255, 196);
 }
 body{
-    background-image: url(https://i.pinimg.com/736x/3c/33/46/3c334658bf58cb09c3b1e224030f603f.jpg);
+    background-image: url(/2000swebpage/assets/fondo2.jpg);
     background-size: cover;
     background-attachment: fixed;
     font-family: "Cascadia Code", sans-serif; /*cascadia code para hacerme el interesante xddd*/
@@ -16,7 +16,7 @@ body{
     margin: 0 auto;
     max-width: 1200px;
     min-width: 320px;
-    margin: 100 auto;
+    margin: 10px auto;
     display: grid;
 }
 .top-bar{ /*mi h2*/
@@ -143,5 +143,7 @@ body{
     left: 270px;
 }
 .flowers-gif{
-    width: 100%;
+    position: fixed;
+    width: 360px;
+    top: 530px;
 }
