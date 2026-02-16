@@ -207,3 +207,19 @@ hr{ /*separadores*/
     top: 364px;
     left: 285px;
 }
+.rick-astley{
+    width: 50px;
+    position: absolute;
+    position: fixed;
+    bottom: 10px;
+}
+.rick-astley img{
+    width: 70px;
+}
+
+/*#########################################################################*/
+footer{
+    margin: 0;
+    text-align: center;
+    color: gray;
+}
