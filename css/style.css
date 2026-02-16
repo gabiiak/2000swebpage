@@ -4,7 +4,7 @@
     --my-color-green:rgb(192, 255, 196);
 }
 body{
-    background-image: url(/2000swebpage/assets/fondo2.jpg);
+    background-image: url(fondo2.jpg);
     background-size: cover;
     background-attachment: fixed;
     font-family: "Cascadia Code", sans-serif; /*cascadia code para hacerme el interesante xddd*/
