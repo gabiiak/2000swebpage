@@ -1,303 +1,228 @@
 :root{
-    /*--bar-gradient: linear-gradient(90deg,rgba(199, 64, 181, 1) 0%, rgba(217, 130, 205, 1) 16%, rgba(145, 22, 139, 1) 30%, rgba(153, 86, 153, 1) 50%, rgba(175, 11, 181, 1) 71%, rgba(209, 113, 207, 1) 85%, rgba(153, 29, 145, 1) 100%);
-    */
-    --bar-gradient: linear-gradient(7deg,rgba(35, 204, 49, 1) 0%, rgba(15, 186, 49, 1) 7%, rgba(24, 150, 73, 1) 33%, rgba(13, 12, 12, 1) 100%);
-    --my-color-magenta:rgb(169, 11, 169);
+    --my-color-cards:rgba(248, 236, 241, 0.89);
     --my-color-pastel-green:rgb(192, 255, 196);
-    --my-color-cards:rgb(20, 19, 19);
-    --my-color-light-blue:rgb(3, 239, 247);
-    --my-color-green: rgb(51, 254, 1);
+    --my-color-pastel-pink: rgb(236, 177, 224);
+    --my-color-ultra-pink:rgba(237, 125, 172);
+}
+.root-gif{
+    position: absolute;
+    height: 70px;
+    z-index: 1;
 }
 body{
-    background-image: url(fondo15.jpg);
-    background-size: 500px 1000px;
-    font-family:'Courier New', Courier, monospace; /*cascadia code para hacerme el interesante xddd*/
-    font-size: 1rem;
-    color: white;
+    background-image: url(sanrio/pastel7.gif);
+    background-color: transparent;
+    background-size: 700px 850px;
+    font-family: "Sour Gummy";
+    font-size: 0.8rem;
+    color: rgb(97, 94, 97);
 }
 .main{
+    display: grid;
     position: relative;
     margin: 0 auto;
-    max-width: 1200px;
+    margin-top: 16px;
+    width: 90%;
+    max-width: 320px;
     min-width: 320px;
-    display: grid;
+    animation: float 5s ease-in-out infinite;
 }
-.top-bar{ /*mi h2*/
+@keyframes float{ /*hola vengo a flotar oWo*/
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-3px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/*-------------------------------------------------------------------------*/
+.top-bar{
     margin: 0;
-    padding-left: 7px;
-    background: rgb(199, 2, 199); /*magenta para generar 3D*/
-    font-style: normal;
-    color: var(--my-color-green);
-    font-family: "Bitcount Grid Double", system-ui;
-    border-bottom: 8px outset var(--my-color-magenta);
-    font-size: 15px;
-    text-shadow: 2px 2px 2px  black;
+    font-size: 1rem;
+    padding-left: 10px;
+    background-color: var(--my-color-ultra-pink);
+    color:white;
+    border-bottom: 2px solid var(--my-color-ultra-pink);
+    box-shadow: 0px 0px 1px var(--my-color-ultra-pink);
+    text-shadow: 2px 2px 0px pink; 
 }
-
-/*#########################################################################*/
-
-.left-container{
-    /*padding: 10px 1rem;*/
-    position: relative;
-    margin: 0;
-}
-.banner .top-bar{
-    padding: 5px;
+.top-bar img{
+    height: 1.8em;
+    margin: 0 4px;
+    vertical-align: middle;
 }
 .banner{
-    display: block;
-    position: relative;
-    border: 8px outset var(--my-color-magenta);
-    /*border-top-left-radius: 5px;
-    border-top-right-radius: 5px;*/
-    height: 180px;
-    background-color: var(--my-color-cards);
-    overflow: hidden;
-}
-.banner img{
-    width: 100%;
-    height: 135px;
-}
-.profile{
-    position: relative; /*para que los gifs no se bugeen*/
-    margin-top: 16px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    border: 8px outset var(--my-color-magenta);
-    /*border-top-left-radius: 5px;
-    border-top-right-radius: 5px;*/
-    background-color: var(--my-color-cards);
-}
-.profile .top-bar{
-    grid-column: 1/3;
-}
-.picture{
-    margin: 10px 10px;
-    width: 100px;
     height: 100px;
-    border: 2px solid var(--my-color-green);
-    /*border-radius: 5px;*/
+    border: 2px solid var(--my-color-ultra-pink);
+    box-shadow: 0px 0px 13px var(--my-color-ultra-pink);
+    margin-bottom: 16px;
 }
-.status{
-    position: relative;
-    padding: 0.30rem;
-    margin: 20px 10px;
-    border: 2px solid white;
-    /*border-radius: 10px;*/
-    background-color: white;
+#banner1{
+    height: 180px;
 }
-.status p{
-    margin: 0;
-    color: black;
+#banner1 img{
+    width: 100%;
+    height: 100%;
 }
-.status::after{ /*triangulito*/
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 20px;
-    left: 19px;
-    margin-left: -35px;
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-right: 15px solid white;
-}
-.things{
-    grid-column: 1/3;
-}
-.things p{
-    color: var(--my-color-green);
-    margin: 0;
-    padding: 0.50rem;
-}
-.things p span{
-    border: 2px solid var(--my-color-green);
-    background-color: var(--my-color-green);
-    color: black;
-}
-
-/*#########################################################################*/
-
-.right-container{
-    /*padding: 10px 1rem;*/
-    margin-top: 16px;
-}
-.links .top-bar{
-    padding: 5px;
-}
-.links{
-    margin: 0;
-    display: grid;
-    border: 8px outset var(--my-color-magenta);
-    /*border-top-left-radius: 5px;
-    border-top-right-radius: 5px;*/
-    background-color: var(--my-color-cards);
-}
-.links a{
-    display: flex;
-    margin: 5px 5px;
-    font-family: "Bitcount Grid Double", system-ui;
-    color: var(--my-color-green);
-    justify-content: center;
-    border: 3px groove var(--my-color-green);
-    text-decoration: none;
-
-}
-.links a:hover{
-    background-color: var(--my-color-green);
-    color: black;
-    cursor: pointer;
-}
-.banner2 .top-bar{
-    padding: 5px;
-}
-.banner2{
-    margin-top: 16px;
-    position: relative;
-    display: block;
-    border: 8px outset var(--my-color-magenta);
-    background-color: var(--my-color-cards);
+/*-------------------------------------------------------------------------*/
+.card{
     
 }
-.banner2 img{
+.left-container{
+    display: grid;
     position: relative;
-    width: 100%;
-    height: 270px;
+    background-color: rgba(255, 255, 255, 0.694);
+    border: 2px solid var(--my-color-ultra-pink);
+    box-shadow: 0px 0px 13px var(--my-color-ultra-pink); /*efecto glow owo*/
+    margin-bottom: 16px;
+    grid-template-columns: 150px;
 }
-hr{ /*separadores*/
-    width: 95%;
-    border: 1px solid var(--my-color-green);
+#name{
+    padding-top: 3%;
+    grid-column: 1/4;
+    font-family: "Pacifico";
+    font-size: 1.7rem;
+    padding-left: 5%;
+    color: var(--my-color-pastel-pink);
+    font-style: oblique;
+    text-shadow: 1px 2px 0px var(--my-color-ultra-pink);
+}
+#name img{
+    height: 1em;
+    height: 2.5em;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+#picture{
+    position: relative;
+    padding-top: 3%;
+    padding-left: 5%;
+}
+#picture img{
+    width: 100%;
+}
+#status{
+    grid-column: 2/4;
+}
+#status p{
+    margin: 8px;
+    text-overflow: ellipsis;
+}
+#status span{
+    background-color: pink;
+    border: 2px solid;
+}
+#status img{
+    height: 2em;
+    margin: 0 4px;
+    vertical-align: middle;
+}
+#links{
+    grid-column: 1/4;
+    width: 94%;
+    margin: 0 auto;
+    padding-top: 5%;
+    margin-bottom: 16px;
+}
+.my-linktree{
+    display: grid;
+    text-align: center;
+    border: 2px solid var(--my-color-ultra-pink);
+    box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
+}
+.my-linktree a{
+    text-decoration: none;
+    color: rgb(97, 94, 97);
+    padding: 5px;
+}
+.my-linktree a:hover{
+    background-color: pink;
+}
+.my-linktree a img{
+    height: 1.5em;
+    margin: 0 4px;
+    vertical-align: middle;
 }
 
-.about .top-bar{
-    padding: 5px;
+/*-------------------------------------------------------------------------*/
+#banner2{
+    height: 150px;
 }
-.about{
-    margin-top: 16px;
-    border: 8px outset var(--my-color-magenta);
-    /*border-top-left-radius: 5px;
-    border-top-right-radius: 5px;*/
-    background-color: var(--my-color-cards);
+#banner2 img{
+    width: 100%;
+    height: 100%;
 }
-.about p{
-    margin: 0;
-    color: var(--my-color-green);
-    padding: 0.50rem;
+/*-------------------------------------------------------------------------*/
+.right-container{
+    padding-top: 3.5%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.694);
+    border: 2px solid var(--my-color-ultra-pink);
+    box-shadow: 0px 0px 13px var(--my-color-ultra-pink);
+    margin-bottom: 16px; 
 }
-.about ul{
-    margin: 0;
-    color: var(--my-color-green);
+hr{
+    border: 1px solid rgb(97, 94, 97);
+    width: 95%;
+    margin: 0 auto;
 }
-.cosplay .top-bar{
-    padding: 5px;
+#about{
+    width: 94%;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid var(--my-color-ultra-pink);
+    box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
+    margin-bottom: 16px;
 }
-.cosplay{
-    margin-top: 16px;
-    border: 8px outset var(--my-color-magenta);
-    /*border-top-left-radius: 5px;
-    border-top-right-radius: 5px;*/
-    background-color: var(--my-color-cards);
+#about p{
+
 }
-.cosplay p{
-    margin: 0;
-    color: var(--my-color-green);
-    padding: 0.30rem;
+#about img{
+    height: 2em;
+    margin: 0 4px;
+    vertical-align: middle;
 }
-.cosplay img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin: 15px;
+#cosplay{
+    width: 94%;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid var(--my-color-ultra-pink);
+    box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
+    margin-bottom: 16px;
 }
-.cosplay-images-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,110px);
+.cosplay-imgs{
+    width: 100%;
+    grid-template-columns: repeat(auto-fill,10px);
     gap: 2px;
 }
-
-/*#########################################################################*/
-.anime-gurl-gif{
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    top: 90.9%;
-    left: 1%;
-}
-.cat-paws-gif{
-    width: 60px;
-    position: absolute;
-    top: 98.3%;
-    left: 77%;
-}
-.rick-astley{
-    width: 50px;
-    position: fixed;
-    bottom: 10px;
-}
-.rick-astley img{
-    width: 70px;
-}
-.heart-cat-gif{ /*los gifs tienen que estar dentro del contenedor para evitar bugs*/
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 75.0%;
-    left: 78%;
-}
-.stars-gif{
-    position: absolute;
-    width: 95%;
-    height: 9.9%;
-    top: 14.1%;
-    left: 2.3%;
-}
-.desktop-gif{
-    position: absolute;
-    width: 50px;
-    left: 85%;
-}
-.cafecito-link{
-    position: absolute;
-    bottom: 42.1%;
-    left: 85%;
-}
-.cafecito-link img{
-    width: 40px;
-}
-.jump-cat-gif{
-    position: absolute;
-    top: 48%;
-    width: 70px;
-    left: -5px;
-}
-.cinnamon-gif{
-    position: fixed;
-    width: 80px;
-    top: -8px;
-    right: 1%;
-}
-.bunny-gif{
-    position: absolute;
+.cosplay-imgs img{
     width: 100px;
-    top: 52.2%;
-    right: 3%;
+    background-color: transparent;
 }
-.my-melody-gif{
-    position: fixed;
-    width: 120px;
-    top: -20px;
-    left: -20px;
+/*-------------------------------------------------------------------------*/
+#hojita{
+    top: 131px;
+    left: -10px;
 }
-.penguin-clean-gif{
+#chilemorron{
+    top: 402px;
+    left: 4%;
+    height: 50px;
+}
+#mymelody{
     position: fixed;
-    width: 90px;
-    right: 1%;
+    height: 150px;
+    left: 1%;
     bottom: 1%;
 }
-/*#########################################################################*/
-footer{
-    margin: 0;
-    text-align: center;
-    color: white;
+#lexe{
+    height: 35px;
+    top: 46.2%;
+    right: 24%;
 }
+/*-------------------------------------------------------------------------*/
