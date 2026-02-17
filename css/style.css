@@ -9,10 +9,10 @@
     --my-color-green: rgb(51, 254, 1);
 }
 body{
-    background-image: url(fondo5.jpg);
+    background-image: url(fondo15.jpg);
     background-size: 500px 1000px;
     font-family:'Courier New', Courier, monospace; /*cascadia code para hacerme el interesante xddd*/
-    font-size: medium;
+    font-size: 1rem;
     color: white;
 }
 .main{
@@ -38,6 +38,7 @@ body{
 
 .left-container{
     /*padding: 10px 1rem;*/
+    position: relative;
     margin: 0;
 }
 .banner .top-bar{
@@ -45,18 +46,20 @@ body{
 }
 .banner{
     display: block;
+    position: relative;
     border: 8px outset var(--my-color-magenta);
     /*border-top-left-radius: 5px;
     border-top-right-radius: 5px;*/
-    height: 200px;
+    height: 180px;
     background-color: var(--my-color-cards);
     overflow: hidden;
 }
 .banner img{
     width: 100%;
-    height: 200px;
+    height: 135px;
 }
 .profile{
+    position: relative; /*para que los gifs no se bugeen*/
     margin-top: 16px;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -108,6 +111,11 @@ body{
     margin: 0;
     padding: 0.50rem;
 }
+.things p span{
+    border: 2px solid var(--my-color-green);
+    background-color: var(--my-color-green);
+    color: black;
+}
 
 /*#########################################################################*/
 
@@ -136,10 +144,32 @@ body{
     text-decoration: none;
 
 }
+.links a:hover{
+    background-color: var(--my-color-green);
+    color: black;
+    cursor: pointer;
+}
+.banner2 .top-bar{
+    padding: 5px;
+}
+.banner2{
+    margin-top: 16px;
+    position: relative;
+    display: block;
+    border: 8px outset var(--my-color-magenta);
+    background-color: var(--my-color-cards);
+    
+}
+.banner2 img{
+    position: relative;
+    width: 100%;
+    height: 270px;
+}
 hr{ /*separadores*/
     width: 95%;
     border: 1px solid var(--my-color-green);
 }
+
 .about .top-bar{
     padding: 5px;
 }
@@ -178,48 +208,96 @@ hr{ /*separadores*/
     width: 100px;
     height: 100px;
     object-fit: cover;
+    margin: 15px;
 }
 .cosplay-images-container{
     display: grid;
-    grid-template-columns: repeat(auto-fill,100px);
-    gap: 4px;
+    grid-template-columns: repeat(auto-fill,110px);
+    gap: 2px;
 }
 
 /*#########################################################################*/
-
-.heart-cat-gif{ /*gifs que están en la raíz*/
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 341px;
-    left: 340px;
-}
 .anime-gurl-gif{
     width: 70px;
     height: 70px;
     position: absolute;
-    top: 450px;
-    left: 10px;
+    top: 90.9%;
+    left: 1%;
 }
 .cat-paws-gif{
-    width: 50px;
+    width: 60px;
     position: absolute;
-    top: 364px;
-    left: 285px;
+    top: 98.3%;
+    left: 77%;
 }
 .rick-astley{
     width: 50px;
-    position: absolute;
     position: fixed;
     bottom: 10px;
 }
 .rick-astley img{
     width: 70px;
 }
-
+.heart-cat-gif{ /*los gifs tienen que estar dentro del contenedor para evitar bugs*/
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 75.0%;
+    left: 78%;
+}
+.stars-gif{
+    position: absolute;
+    width: 95%;
+    height: 9.9%;
+    top: 14.1%;
+    left: 2.3%;
+}
+.desktop-gif{
+    position: absolute;
+    width: 50px;
+    left: 85%;
+}
+.cafecito-link{
+    position: absolute;
+    bottom: 42.1%;
+    left: 85%;
+}
+.cafecito-link img{
+    width: 40px;
+}
+.jump-cat-gif{
+    position: absolute;
+    top: 48%;
+    width: 70px;
+    left: -5px;
+}
+.cinnamon-gif{
+    position: fixed;
+    width: 80px;
+    top: -8px;
+    right: 1%;
+}
+.bunny-gif{
+    position: absolute;
+    width: 100px;
+    top: 52.2%;
+    right: 3%;
+}
+.my-melody-gif{
+    position: fixed;
+    width: 120px;
+    top: -20px;
+    left: -20px;
+}
+.penguin-clean-gif{
+    position: fixed;
+    width: 90px;
+    right: 1%;
+    bottom: 1%;
+}
 /*#########################################################################*/
 footer{
     margin: 0;
     text-align: center;
-    color: gray;
+    color: white;
 }
