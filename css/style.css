@@ -216,13 +216,21 @@ hr{
 }
 #mymelody{
     position: fixed;
-    height: 150px;
-    left: 1%;
-    bottom: 1%;
+    height: 120px;
+    left: -11px;
+    bottom: -11px;
 }
 #lexe{
     height: 35px;
     top: 46.2%;
     right: 24%;
+}
+#panda{
+    bottom: 2%;
+    height: 30px;
+    right: 4%;
+}
+#monitachina{
+    bottom: 24.2%;
 }
 /*-------------------------------------------------------------------------*/
