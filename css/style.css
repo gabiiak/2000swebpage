@@ -1,8 +1,9 @@
 :root{
     --my-color-cards:rgba(248, 236, 241, 0.89);
-    --my-color-pastel-green:rgb(192, 255, 196);
-    --my-color-pastel-pink: rgb(236, 177, 224);
-    --my-color-ultra-pink:rgba(237, 125, 172);
+    --my-color-pastel-green:rgb(224, 255, 226);
+    --my-color-ultra-green: rgb(181, 255, 186);
+    --my-color-ultra-pink: rgb(252, 170, 235);
+    --my-color-pastel-pink:rgb(248, 187, 212);
 }
 .root-gif{
     position: absolute;
@@ -10,10 +11,11 @@
     z-index: 1;
 }
 body{
-    background-image: url(sanrio/fondo16.jpg);
+    background-image: url(soft_green/fondo4.jpg);
     background-color: transparent;
-    background-size: 100% 100%;
-    font-family: "Sour Gummy";
+    background-size: 60% 60%;
+    font-family: "Indie Flower", cursive;
+    font-weight: 800;
     font-size: 0.8rem;
     color: rgb(97, 94, 97);
 }
@@ -43,7 +45,7 @@ body{
     margin: 0;
     font-size: 1rem;
     padding-left: 10px;
-    background-color: var(--my-color-ultra-pink);
+    background-color: var(--my-color-pastel-pink);
     color:white;
     border-bottom: 2px solid var(--my-color-ultra-pink);
     box-shadow: 0px 0px 1px var(--my-color-ultra-pink);
@@ -68,10 +70,24 @@ body{
     width: 100%;
     height: 100%;
 }
-/*-------------------------------------------------------------------------*/
-.card{
-    
+#banner2{
+    height: 150px;
 }
+#banner2 img{
+    width: 100%;
+    height: 100%;
+}
+#banner3{
+    height: 180px;
+}
+#banner3 img{
+    width: 100%;
+    height: 100%;
+}
+#banner4{
+    display: none;
+}
+/*-------------------------------------------------------------------------*/
 .left-container{
     display: grid;
     position: relative;
@@ -84,15 +100,14 @@ body{
 #name{
     padding-top: 3%;
     grid-column: 1/4;
-    font-family: "Pacifico";
+    font-family:"Pacifico";
     font-size: 1.7rem;
     padding-left: 5%;
-    color: var(--my-color-pastel-pink);
+    color: var(--my-color-ultra-green);
     font-style: oblique;
-    text-shadow: 1px 2px 0px var(--my-color-ultra-pink);
+    text-shadow: 2px 2px 0px var(--my-color-pastel-pink);
 }
 #name img{
-    height: 1em;
     height: 2.5em;
     margin: 0 5px;
     vertical-align: middle;
@@ -104,16 +119,18 @@ body{
 }
 #picture img{
     width: 100%;
+    border-radius: 10px;
 }
 #status{
     grid-column: 2/4;
+    margin-bottom: 16px;
 }
 #status p{
     margin: 8px;
     text-overflow: ellipsis;
 }
 #status span{
-    background-color: pink;
+    background-color: var(--my-color-ultra-green);
     border: 2px solid;
 }
 #status img{
@@ -125,14 +142,15 @@ body{
     grid-column: 1/4;
     width: 94%;
     margin: 0 auto;
-    padding-top: 5%;
     margin-bottom: 16px;
+    background-color: rgb(224, 255, 226); /*rosita claro owo rgb(252, 239, 248)*/
 }
 .my-linktree{
     display: grid;
     text-align: center;
     border: 2px solid var(--my-color-ultra-pink);
     box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
+    height: 99%;
 }
 .my-linktree a{
     text-decoration: none;
@@ -140,7 +158,7 @@ body{
     padding: 5px;
 }
 .my-linktree a:hover{
-    background-color: pink;
+    background-color: rgb(174, 255, 174);
 }
 .my-linktree a img{
     height: 1.5em;
@@ -155,14 +173,7 @@ body{
 }
 
 /*-------------------------------------------------------------------------*/
-#banner2{
-    height: 150px;
-}
-#banner2 img{
-    width: 100%;
-    height: 100%;
-}
-/*-------------------------------------------------------------------------*/
+
 
 .right-container{
     padding-top: 3.5%;
@@ -178,7 +189,7 @@ body{
     height: 12px;
 }
 hr{
-    border: 1px solid rgb(97, 94, 97);
+    border: 1px solid rgb(141, 139, 141);
     width: 95%;
     margin: 0 auto;
 }
@@ -189,6 +200,7 @@ hr{
     border: 2px solid var(--my-color-ultra-pink);
     box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
     margin-bottom: 16px;
+    background-color: var(--my-color-pastel-green);
 }
 #about p{
 
@@ -205,32 +217,26 @@ hr{
     border: 2px solid var(--my-color-ultra-pink);
     box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
     margin-bottom: 16px;
+    background-color: var(--my-color-pastel-green);
 }
 .cosplay-imgs{
     width: 100%;
     grid-template-columns: repeat(auto-fill,10px);
-    gap: 2px;
+    gap: 1px;
 }
 .cosplay-imgs img{
-    width: 100px;
+    width: 120px;
     background-color: transparent;
 }
 /*-------------------------------------------------------------------------*/
-#banner3{
-    height: 150px;
-}
-#banner3 img{
-    width: 100%;
-    height: 100%;
-}
-/*-------------------------------------------------------------------------*/
+
 
 #hojita{
     top: 131px;
     left: -10px;
 }
 #chilemorron{
-    top: 210px;
+    top: 200px;
     left: 10px;
     height: 40px;
 }
@@ -239,11 +245,6 @@ hr{
     height: 120px;
     left: -21px;
     bottom: -11px;
-}
-#lexe{
-    height: 65px;
-    top: 620px;
-    right: 10px;
 }
 #panda{
     bottom: 15px;
@@ -254,28 +255,29 @@ hr{
     top: 275px;
 }
 #burguer-cat{
-    top: -40px;
+    top: -840px;
     left: 280px;
     height: 60px;
 }
 #carrot-bunny{
     height: 60px;
-    top: 380px;
+    top: 376px;
     left: 250px;
 }
 #ramen{
     height: 50px;
-    top: -70px;
-    right: 5px;
+    top: 550px;
+    right: -1px;
 }
 #heart2{
-    height: 40px;
-    right: 1px;
-    top: 120px;
-}
-#gelly{
     height: 50px;
-    top: -40px;
+    right: 1px;
+    top: 130px;
+}
+#ice-cream{
+    height: 60px;
+    top: -200px;
+    left: -20px;
 }
 #hearts{
     height: 130px;
@@ -285,7 +287,11 @@ hr{
 #heart-cat{
     height: 50px;
     right: 20px;
-    top: 635px;
+    top: 690px;
+}
+#profile-leaf{
+    left: -10px;
+    top: -18px;
 }
 /*-------------------------------------------------------------------------*/
 
@@ -293,28 +299,111 @@ hr{
 
 @media screen and (min-width:768px) {
     body{
-        background-image: url(sanrio/fondo16.jpg);
-        background-size: 100% 1080px;
+        background-image: url(soft_green/fondo4.jpg);
+        background-size: 60% 60%;;
         font-size: 1.2rem;
     }
     .main{
         display: grid;
-        max-width: 760px;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: auto auto auto;
+        max-width: 940px;
         width: 100%;
     }
     #banner1{
         grid-column: 1/4;
+        height: 250px;
+        grid-row: 1;
     }
     #banner2{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #banner3{
         grid-column: 1/2;
+        grid-row: 4;
+    }
+    #banner4{
+        display: block;
+        width: 99.2%;
+        height: 200px;        
+    }
+    #banner4 img{
+        width: 100%;
+        height: 100%;
     }
     .left-container{
         grid-column: 1/2;
-        height: 530px;
+        height: 595px;
+        grid-template-columns: 200px;
+        grid-row: 2;
     }
     .right-container{
         margin-left: 16px;
-        grid-row: 3;
-        grid-column: 3/4;
+        grid-row: 2/8;
+        grid-column: 2/4;
+        grid-template-columns: 260px;
+    }
+    /*ROOT GIFS OWO*/
+    #hojita{
+    top: 182px;
+    left: -10px;
+    }
+    #chilemorron{
+        top: 280px;
+        left: 10px;
+        height: 60px;
+    }
+    #mymelody{
+        position: fixed;
+        height: 120px;
+        left: -21px;
+        bottom: -11px;
+    }
+    #panda{
+        bottom: 15px;
+        height: 50px;
+        left: 20px;
+    }
+    #monitachina{
+        top: 450px;
+    }
+    #burguer-cat{
+        top: -330px;
+        left: 420px;
+        height: 60px;
+    }
+    #carrot-bunny{
+        height: 80px;
+        top: 520px;
+        left: 380px;
+    }
+    #ramen{
+        height: 70px;
+        top: -90px;
+        right: -480px;
+    }
+    #heart2{
+        height: 50px;
+        right: 1px;
+        top: 200px;
+    }
+    #ice-cream{
+        height: 60px;
+        top: -30px;
+        left: -20px;
+    }
+    #hearts{
+        height: 190px;
+        top: 111px;
+        left: 10px;
+    }
+    #heart-cat{
+        height: 50px;
+        right: 20px;
+        top: 785px;
+    }
+    #profile-leaf{
+        left: -5px;
     }
 }
