@@ -1,9 +1,10 @@
 :root{
     --my-color-cards:rgba(248, 236, 241, 0.89);
-    --my-color-pastel-green:rgb(224, 255, 226);
+    --my-color-pastel-green: rgb(224, 255, 226); /*verde pastel rgb(224, 255, 226)*/
     --my-color-ultra-green: rgb(181, 255, 186);
-    --my-color-ultra-pink: rgb(252, 170, 235);
+    --my-color-ultra-pink: rgb(248, 174, 233);
     --my-color-pastel-pink:rgb(248, 187, 212);
+    --my-color-ultra-paste-pink: rgba(252, 239, 248, 0.691);
 }
 .root-gif{
     position: absolute;
@@ -114,12 +115,16 @@ body{
 }
 #picture{
     position: relative;
-    padding-top: 3%;
-    padding-left: 5%;
+    margin-left: 10px;
+    margin-bottom: 9px;
+    border: 2px solid var(--my-color-ultra-pink);
+    box-shadow: 0px 0px 13px var(--my-color-ultra-pink);
+    border-radius: 10px;
 }
 #picture img{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
+    height: 100%;
 }
 #status{
     grid-column: 2/4;
@@ -129,21 +134,37 @@ body{
     margin: 8px;
     text-overflow: ellipsis;
 }
-#status span{
-    background-color: var(--my-color-ultra-green);
-    border: 2px solid;
-}
 #status img{
     height: 2em;
     margin: 0 4px;
     vertical-align: middle;
+}
+#welcome{
+    width: 93%;
+    margin: 0 auto;
+    border: 2px solid var(--my-color-ultra-pink);
+    grid-column: 1/4;
+    margin-bottom: 16px;
+    background-color: var(--my-color-ultra-paste-pink);
+    box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
+}
+#welcome p{
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+#welcome span{
+    background-color: rgb(175, 216, 143);
+    border: 2px solid;
+    font-size: 1.2rem;
+    padding: 6px;
 }
 #links{
     grid-column: 1/4;
     width: 94%;
     margin: 0 auto;
     margin-bottom: 16px;
-    background-color: rgb(224, 255, 226); /*rosita claro owo rgb(252, 239, 248)*/
+    background-color: var(--my-color-ultra-paste-pink); /*rosita claro owo rgb(252, 239, 248)*/
 }
 .my-linktree{
     display: grid;
@@ -158,7 +179,7 @@ body{
     padding: 5px;
 }
 .my-linktree a:hover{
-    background-color: rgb(174, 255, 174);
+    background-color: rgb(246, 223, 249);
 }
 .my-linktree a img{
     height: 1.5em;
@@ -173,7 +194,12 @@ body{
 }
 
 /*-------------------------------------------------------------------------*/
-
+.separator{
+    width: 93%;
+    margin: 0 auto;
+    height: 60px;
+}
+/*-------------------------------------------------------------------------*/
 
 .right-container{
     padding-top: 3.5%;
@@ -200,10 +226,12 @@ hr{
     border: 2px solid var(--my-color-ultra-pink);
     box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
     margin-bottom: 16px;
-    background-color: var(--my-color-pastel-green);
+    background-color: var(--my-color-ultra-paste-pink);
 }
 #about p{
-
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
 }
 #about img{
     height: 2em;
@@ -217,7 +245,12 @@ hr{
     border: 2px solid var(--my-color-ultra-pink);
     box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
     margin-bottom: 16px;
-    background-color: var(--my-color-pastel-green);
+    background-color: var(--my-color-ultra-paste-pink);
+}
+#cosplay p{
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
 }
 .cosplay-imgs{
     width: 100%;
@@ -252,27 +285,27 @@ hr{
     left: 20px;
 }
 #monitachina{
-    top: 275px;
+    top: 376px;
 }
 #burguer-cat{
-    top: -840px;
+    top: -1210px;
     left: 280px;
     height: 60px;
 }
 #carrot-bunny{
     height: 60px;
-    top: 376px;
-    left: 250px;
+    top: 533px;
+    left: 10px;
 }
 #ramen{
     height: 50px;
-    top: 550px;
-    right: -1px;
+    top: 537px;
+    right: 10px;
 }
 #heart2{
     height: 50px;
-    right: 1px;
-    top: 130px;
+    right: -20px;
+    top: -50px;
 }
 #ice-cream{
     height: 60px;
@@ -288,10 +321,21 @@ hr{
     height: 50px;
     right: 20px;
     top: 690px;
+    display: none;
 }
 #profile-leaf{
     left: -10px;
     top: -18px;
+}
+#mew{
+    bottom: 16px;
+    right: 15px;
+    height: 40px;
+}
+#sleepin-cat{
+    bottom: 480px;
+    left: 175px;
+    height: 70px;
 }
 /*-------------------------------------------------------------------------*/
 
@@ -301,7 +345,7 @@ hr{
     body{
         background-image: url(soft_green/fondo4.jpg);
         background-size: 60% 60%;;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     .main{
         display: grid;
@@ -332,9 +376,19 @@ hr{
         width: 100%;
         height: 100%;
     }
+    #name{
+        font-size: 2.5rem;
+    }
+    #picture{
+        height: 200px;
+        margin-left: 15px;
+    }
+    #welcome p{
+        font-size: 1.2rem;
+    }
     .left-container{
         grid-column: 1/2;
-        height: 595px;
+        height: 995px;
         grid-template-columns: 200px;
         grid-row: 2;
     }
@@ -343,6 +397,15 @@ hr{
         grid-row: 2/8;
         grid-column: 2/4;
         grid-template-columns: 260px;
+    }
+    #about p{
+        font-size: 1.2rem;
+    }
+    #cosplay p{
+        font-size: 1.2rem;
+    }
+    #ascii{
+        display: none;
     }
     /*ROOT GIFS OWO*/
     #hojita{
@@ -366,7 +429,7 @@ hr{
         left: 20px;
     }
     #monitachina{
-        top: 450px;
+        top: 463px;
     }
     #burguer-cat{
         top: -330px;
@@ -375,8 +438,8 @@ hr{
     }
     #carrot-bunny{
         height: 80px;
-        top: 520px;
-        left: 380px;
+        top: 660px;
+        left: 370px;
     }
     #ramen{
         height: 70px;
@@ -404,6 +467,10 @@ hr{
         top: 785px;
     }
     #profile-leaf{
-        left: -5px;
+        left: 7px;
+        top: -3px;
+    }
+    #sleepin-cat{
+        top:900px;
     }
 }
