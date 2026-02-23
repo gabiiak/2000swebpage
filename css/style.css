@@ -96,48 +96,38 @@ body{
     border: 2px solid var(--my-color-ultra-pink);
     box-shadow: 0px 0px 13px var(--my-color-ultra-pink); /*efecto glow owo*/
     margin-bottom: 16px;
-    grid-template-columns: 150px;
+    grid-template-columns: 2fr 2fr;
 }
 #name{
-    padding-top: 3%;
-    grid-column: 1/4;
+    padding-top: 20%;
     font-family:"Pacifico";
-    font-size: 1.7rem;
+    font-size: 2rem;
     padding-left: 5%;
-    color: var(--my-color-ultra-green);
+    color: rgb(233, 131, 168);
     font-style: oblique;
-    text-shadow: 2px 2px 0px var(--my-color-pastel-pink);
+    text-align: center;
 }
 #name img{
-    height: 2.5em;
+    height: 2.2em;
     margin: 0 5px;
     vertical-align: middle;
 }
 #picture{
+    margin-top: 10px;
     position: relative;
+    grid-column: 1;
+    grid-row: 1;
     margin-left: 10px;
     margin-bottom: 9px;
     border: 2px solid var(--my-color-ultra-pink);
     box-shadow: 0px 0px 13px var(--my-color-ultra-pink);
     border-radius: 10px;
+    width: 150px;
 }
 #picture img{
     width: 100%;
     border-radius: 8px;
     height: 100%;
-}
-#status{
-    grid-column: 2/4;
-    margin-bottom: 16px;
-}
-#status p{
-    margin: 8px;
-    text-overflow: ellipsis;
-}
-#status img{
-    height: 2em;
-    margin: 0 4px;
-    vertical-align: middle;
 }
 #welcome{
     width: 93%;
@@ -146,7 +136,7 @@ body{
     grid-column: 1/4;
     margin-bottom: 16px;
     background-color: var(--my-color-ultra-paste-pink);
-    box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
+    box-shadow: 3px 4px 0px rgb(221, 191, 209);
 }
 #welcome p{
     text-align: center;
@@ -158,6 +148,7 @@ body{
     border: 2px solid;
     font-size: 1.2rem;
     padding: 6px;
+    font-family:'Times New Roman', Times, serif;
 }
 #links{
     grid-column: 1/4;
@@ -170,7 +161,7 @@ body{
     display: grid;
     text-align: center;
     border: 2px solid var(--my-color-ultra-pink);
-    box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
+    box-shadow: 3px 4px 0px rgb(221, 191, 209);
     height: 99%;
 }
 .my-linktree a{
@@ -224,7 +215,7 @@ hr{
     margin: 0 auto;
     text-align: center;
     border: 2px solid var(--my-color-ultra-pink);
-    box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
+    box-shadow: 3px 4px 0px rgb(221, 191, 209);
     margin-bottom: 16px;
     background-color: var(--my-color-ultra-paste-pink);
 }
@@ -243,7 +234,7 @@ hr{
     margin: 0 auto;
     text-align: center;
     border: 2px solid var(--my-color-ultra-pink);
-    box-shadow: 3px 3px 0px var(--my-color-ultra-pink);
+    box-shadow: 3px 4px 0px rgb(221, 191, 209);
     margin-bottom: 16px;
     background-color: var(--my-color-ultra-paste-pink);
 }
@@ -263,13 +254,22 @@ hr{
 }
 /*-------------------------------------------------------------------------*/
 
-
+#stars1{
+    height: 50px;
+    top: 10px;
+    left: 10px;
+}
+#stars2{
+    height: 50px;
+    top: 120px;
+    left: 120px;
+}
 #hojita{
     top: 131px;
     left: -10px;
 }
 #chilemorron{
-    top: 200px;
+    top: 145px;
     left: 10px;
     height: 40px;
 }
@@ -288,18 +288,18 @@ hr{
     top: 376px;
 }
 #burguer-cat{
-    top: -1210px;
+    top: -1090px;
     left: 280px;
     height: 60px;
 }
 #carrot-bunny{
     height: 60px;
-    top: 533px;
+    top: 476px;
     left: 10px;
 }
 #ramen{
     height: 50px;
-    top: 537px;
+    top: 483px;
     right: 10px;
 }
 #heart2{
@@ -313,9 +313,10 @@ hr{
     left: -20px;
 }
 #hearts{
-    height: 130px;
-    top: 85px;
-    left: 10px;
+    height: 90px;
+    top: 3px;
+    left: 180px;
+    width: 110px;
 }
 #heart-cat{
     height: 50px;
@@ -324,8 +325,8 @@ hr{
     display: none;
 }
 #profile-leaf{
-    left: -10px;
-    top: -18px;
+    left: 60px;
+    top: -28px;
 }
 #mew{
     bottom: 16px;
@@ -333,7 +334,7 @@ hr{
     height: 40px;
 }
 #sleepin-cat{
-    bottom: 480px;
+    bottom: 470px;
     left: 175px;
     height: 70px;
 }
