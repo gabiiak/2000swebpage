@@ -250,7 +250,7 @@ hr{
     gap: 1px;
 }
 .cosplay-imgs img{
-    width: 120px;
+    width: 200px;
     background-color: transparent;
 }
 /*-------------------------------------------------------------------------*/
@@ -289,7 +289,7 @@ hr{
     top: 376px;
 }
 #burguer-cat{
-    top: -1090px;
+    top: -1110px;
     left: 280px;
     height: 60px;
 }
