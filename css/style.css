@@ -79,27 +79,27 @@
 }
 
 body{
-    background-image: url(windows/windows_plain2.jpg);
+    background-image: url(windows/windows_plain3.jpg);
     background-color: transparent;
-    background-size: 170% 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
     /* font-family: "Indie Flower", cursive;  */
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
     font-weight:normal;
-    font-size: max(0.875em, 12px);
+    font-size: 3.5vw;
     color: rgb(3, 3, 3);
+    cursor: url(/assets/windows/gato_poligonal.png), auto;
 }
 .main{
     display: grid;
     position: relative;
     margin: 0 auto;
     margin-top: 16px;
-    
-    max-width: 320px;
-    min-width: 320px;
+    max-width: 420px;
+    min-width: 90%;
 
-    animation: float 5s ease-in-out infinite;
+    /*animation: float 5s ease-in-out infinite;*/
     
 }
 @keyframes float{ /*hola vengo a flotar oWo*/
@@ -116,16 +116,16 @@ body{
 /*-------------------------------------------------------------------------*/
 .close-tab{
     position: absolute;
-    right: -1px;
-    height: 16px;
+    right: .1%;
+    height: 1.2em;
     vertical-align: middle;
-    padding-right: 2px;
-    padding-top: 4px;
+    padding-right: .4%;
+    padding-top: 1.3%;
 }
 
 .top-bar{
     margin: 0;
-    font-size: 0.6rem;
+    font-size: 0.8em;
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 10px;
@@ -133,67 +133,64 @@ body{
     background: #7daaff;
     background: linear-gradient(180deg, rgba(125, 170, 255, 1) 0%, rgba(3, 83, 230, 1) 15%, rgb(12, 90, 235) 85%, rgb(38, 70, 128) 100%); 
     color:white;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
     /* font-family: 'Tiny5', sans-serif; */
     font-family: verdana, arial, sans-serif, helvetica;
     text-align: left;
 }
 .top-bar img{
-    height: 1.3em;
+    height: 1.4em;
     margin: 0 auto;
     vertical-align: middle;
 }
+.card{
+    border-left: 1.6px solid rgba(3, 83, 230, 1);
+    border-right: 1.6px solid rgba(3, 83, 230, 1);
+    border-bottom: 1.6px solid rgba(3, 83, 230, 1);
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 16px;
+    background-color: var(--my-color-white);
+}
 .banner{
     position: relative;
-    height: 218px;
+    height: auto;
     width: 100%;
-    border-left: 1.5px solid rgba(3, 83, 230, 1);
-    border-right: 1.5px solid rgba(3, 83, 230, 1);
-    border-bottom: 1.5px solid rgba(3, 83, 230, 1);
+    border-left: 1.6px solid rgba(3, 83, 230, 1);
+    border-right: 1.6px solid rgba(3, 83, 230, 1);
+    border-bottom: 1.6px solid rgba(3, 83, 230, 1);
     margin-bottom: 16px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
-#paint{
-    height: 193px;
-    width: 320px;
+
+.banner #paint{
+    display: flex;
+    height: auto;
+    width: 100%;
     
 }
-#pintura{
+.banner #pintura{
     position: absolute;
-    width: 282px;
-    height: 133px;
-    top: 38px;
-    left: 29px;
+    width: 88%;
+    height: 60%;
+    top: 17%;
+    left: 9.2%;
 }
 
 #banner4{
     display: none;
 }
 /*-------------------------------------------------------------------------*/
+
 .left-container{
     position: relative;
-    /*background-color: rgba(255, 255, 255, 0.694);
-    border: 2px solid var(--my-color-ultra-pink);
-    box-shadow: 0px 0px 13px var(--my-color-ultra-pink); /*efecto glow owo*/
-    
-    max-width: 320px;
-    min-width: 320px;
-    
-    /* cursor: url(sanrio/cursor.png), auto; */
 }
-.left-container #profile{
-    margin: 0 auto;
-    border-left: 1.5px solid rgba(3, 83, 230, 1);
-    border-right: 1.5px solid rgba(3, 83, 230, 1);
-    border-bottom: 1.5px solid rgba(3, 83, 230, 1);
-    border-top-left-radius: 2%;
-    border-top-right-radius: 2%;
-    margin-bottom: 16px;
-    background-color: var(--my-color-white);
-    width: 100%;
-}
+
 .left-container #profile-pic-and-name{
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -205,16 +202,16 @@ body{
     
     text-shadow: 2px 2px 4px var(--my-color-border-blue); */
     padding: 1%;
-    font-size: 1rem;
+    font-size: 1.7em;
     text-align: left;
     color: rgb(233, 131, 168);
 }
 .left-container #name p{
-    font-size: 0.6rem;
+    font-size: 0.5em;
     color: black;
 }
 .left-container #name img{
-    height: 2.8rem;
+    height: 2em;
     margin: 0 5px;
     vertical-align: middle;
 }
@@ -222,41 +219,26 @@ body{
     grid-column: 1/2;
     margin: 0 auto;
     position: relative;
+   
     /*box-shadow: 0px 0px 13px var(--my-color-ultra-pink); */
-    width: 100px;
-    padding: 4px;
+    width: 8.7em;
+    padding: 2%;
 }
 .left-container #picture #profilepic{
-    
-    margin-top: 5px;
-    margin-left: 7px;
+    margin-top: 12%;
+    margin-left: 14%;
     border-radius: 8px;
-    padding: 5px;
-    height: 75px;
+    height: 6em;
 }
 .left-container #picture #frame{
     position: absolute;
-    left: -6px;
-    top: -5px;
-    height: 110px;
-    width: 110px;
-    
-}
-.left-container #links{
-    
-    border-left: 1.5px solid rgba(3, 83, 230, 1);
-    border-right: 1.5px solid rgba(3, 83, 230, 1);
-    border-bottom: 1.5px solid rgba(3, 83, 230, 1);
-    border-top-left-radius: 2%;
-    border-top-right-radius: 2%;
+    left: -1%;
+    top: -3.5%;
+    height: auto;
     width: 100%;
-    margin: 0 auto;
-    margin-bottom: 16px;
-    
-    /*background-color: var(--my-color-white); /*rosita claro owo rgb(252, 239, 248)*/
 }
+
 .left-container .my-linktree{
-    
     display: grid;
     text-align: center;
     
@@ -264,9 +246,8 @@ body{
 }
 .left-container .my-linktree a{
     text-decoration: none;
-    
     color: rgb(0, 0, 0);
-    padding: 5px;
+    padding: 2%;
     background-color: var(--my-color-white);
 }
 .left-container .my-linktree a:hover{
@@ -277,22 +258,9 @@ body{
     margin: 0 4px;
     vertical-align: middle;
 }
-.left-container #welcome{
-    width: 100%;
-    margin: 0 auto;
-    border-left: 1.5px solid rgba(3, 83, 230, 1);
-    border-right: 1.5px solid rgba(3, 83, 230, 1);
-    border-bottom: 1.5px solid rgba(3, 83, 230, 1);
-    border-top-left-radius: 2%;
-    border-top-right-radius: 2%;
-    grid-column: 1/4;
-    margin-bottom: 16px;
-    background-color: var(--my-color-white);
-    /* box-shadow: 3px 4px 0px rgb(0, 0, 0); */
-}
 .left-container #welcome p{
     text-align: center;
-    padding: 10px;
+    padding: 2%;
 }
 .left-container #welcome span{
     background-color: rgb(175, 216, 143);
@@ -302,229 +270,65 @@ body{
     font-family:'Times New Roman', Times, serif;
 }
 
-
-
-
 /*-------------------------------------------------------------------------*/
 .separator{
     width: 93%;
     margin: 0 auto;
-    height: 60px;
+    height: auto;
 }
 /*-------------------------------------------------------------------------*/
-
 .right-container{
 
     display: flex;
     flex-direction: column;
     position: relative;
-    max-width: 320px;
-    min-width: 320px;
+    
     /*background-color: rgba(255, 255, 255, 0.694);
     border: 2px solid var(--my-color-ultra-pink);
     box-shadow: 0px 0px 13px var(--my-color-ultra-pink);*/
     margin-bottom: 16px; 
 }
 
-
-hr{
-    border: 1px solid rgb(141, 139, 141);
-    width: 95%;
-    margin: 0 auto;
-}
-#about{
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    border-left: 1.5px solid rgba(3, 83, 230, 1);
-    border-right: 1.5px solid rgba(3, 83, 230, 1);
-    border-bottom: 1.5px solid rgba(3, 83, 230, 1);
-    border-top-left-radius: 1%;
-    border-top-right-radius: 1%;
-    margin-bottom: 16px;
-    background-color: var(--my-color-white);
-}
-#about p{
-    padding: 10px;
+.right-container #about p{
+    padding: 2%;
     text-align: center;
 }
-#about img:not(.close-tab){
+.right-container #about img:not(.close-tab){
     height: 2em;
     margin: 0 4px;
     vertical-align: middle;
 } 
-#cosplay{
-    width: 100%;
-    margin: 0 auto;
+.right-container #cosplay p{
     text-align: center;
-    border-left: 1.5px solid rgba(3, 83, 230, 1);
-    border-right: 1.5px solid rgba(3, 83, 230, 1);
-    border-bottom: 1.5px solid rgba(3, 83, 230, 1);
-    border-top-left-radius: 1%;
-    border-top-right-radius: 1%;
-    margin-bottom: 16px;
-    background-color: var(--my-color-white);
+    padding: 2%;
 }
-#cosplay p{
-    text-align: center;
-    padding: 10px;
-}
-.cosplay-imgs{
+.right-container .cosplay-imgs{
     width: 100%;
     grid-template-columns: repeat(auto-fill,10px);
     gap: 1px;
 }
-.cosplay-imgs img{
-    width: 200px;
+.right-container .cosplay-imgs img{
+    width: 18em;
     background-color: transparent;
 }
 
-#wishlist{
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    border-left: 1.5px solid rgba(3, 83, 230, 1);
-    border-right: 1.5px solid rgba(3, 83, 230, 1);
-    border-bottom: 1.5px solid rgba(3, 83, 230, 1);
-    border-top-left-radius: 1%;
-    border-top-right-radius: 1%;
-    margin-bottom: 16px;
-    background-color: var(--my-color-white);
-}
-/*-------------------------------------------------------------------------*/
 
-#stars1{
-    height: 50px;
-    top: 10px;
-    left: 10px;
-}
-#stars2{
-    height: 50px;
-    top: 120px;
-    left: 120px;
-}
-#hojita{
-    top: 131px;
-    left: -10px;
-}
-#chilemorron{
-    top: 145px;
-    left: 10px;
-    height: 40px;
-}
-#mymelody{
-    position: fixed;
-    height: 120px;
-    left: -21px;
-    bottom: -11px;
-}
-#panda{
-    bottom: 15px;
-    height: 30px;
-    left: 20px;
-}
-#monitachina{
-    top: 376px;
-}
-#burguer-cat{
-    top: -1110px;
-    left: 280px;
-    height: 60px;
-}
-#carrot-bunny{
-    height: 60px;
-    top: 476px;
-    left: 10px;
-}
-#ramen{
-    height: 50px;
-    top: 483px;
-    right: 10px;
-}
-#heart2{
-    height: 50px;
-    right: -20px;
-    top: -50px;
-}
-#ice-cream{
-    height: 60px;
-    top: -200px;
-    left: -20px;
-}
-#hearts{
-    height: 90px;
-    top: 3px;
-    left: 180px;
-    width: 110px;
-}
-#heart-cat{
-    height: 50px;
-    right: 20px;
-    top: 690px;
-    display: none;
-}
-#profile-leaf{
-    left: 60px;
-    top: -28px;
-}
-#mew{
-    bottom: 16px;
-    right: 15px;
-    height: 40px;
-}
-#sleepin-cat{
-    bottom: 470px;
-    left: 175px;
-    height: 70px;
-}
 /*-------------------------------------------------------------------------*/
 
 /*media queries*/
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:620px) {
     body{
         background-image: url(/css/windows/windows_plain2.jpg);
-        background-size: 100% 220%;;
-        font-size: 0.8rem;
+        background-size: cover;
+        font-size: 16px;
     }
     .main{
         display: grid;
         grid-template-columns: 2fr 2fr;
         grid-template-rows: auto auto auto;
-        max-width: 940px;
-        width: 100%;
-    }
-    #banner1{
-        grid-column: 1/4;
-        height: 250px;
-        grid-row: 1;
-    }
-    #banner2{
-        grid-column: 1;
-        grid-row: 3;
-    }
-    #banner3{
-        grid-column: 1/2;
-        grid-row: 4;
-    }
-    #banner4{
-        display: block;
-        width: 99.2%;
-        height: 200px;        
-    }
-    #banner4 img{
-        width: 100%;
-        height: 100%;
-    }
-    #name{
-        font-size: 2.5rem;
-    }
-    #picture{
-        height: 200px;
-        margin-left: 15px;
-    }
-    #welcome p{
-        font-size: 1.2rem;
+        max-width: 1200px;
+        min-width: 90%;
     }
     .left-container{
         grid-column: 1/2;
@@ -538,79 +342,59 @@ hr{
         grid-column: 2/4;
         grid-template-columns: 260px;
     }
-    #about p{
-        font-size: 1.2rem;
+}
+
+@media screen and (min-width:1000px) {
+    body{
+        background-image: url(/css/windows/windows_plain2.jpg);
+        background-size: cover;
+        font-size: 22px;
     }
-    #cosplay p{
-        font-size: 1.2rem;
+    .main{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: auto auto auto;
+        min-width: 70%;
+    }
+    .banner{
+        grid-column: 1/4;
+        height: auto;
+        grid-row: 1;
+    }
+    .banner #paint{
+        display: flex;
+        height: auto;
+        width: 100%;
+    
+    }
+    .banner #pintura{
+        position: absolute;
+        width: 88%;
+        height: 63%;
+        top: 15%;
+        left: 9.2%;
+    }
+    #banner4{
+        display: block;
+    }
+    #name{
+        font-size: 2.7em;
+    }
+    
+    .left-container{
+        grid-column: 1/2;
+        height: 995px;
+        grid-template-columns: 200px;
+        grid-row: 2;
+    }
+    .right-container{
+        margin-left: 16px;
+        grid-row: 2/8;
+        grid-column: 2/4;
+        grid-template-columns: 260px;
     }
     #ascii{
         display: none;
     }
-    /*ROOT GIFS OWO*/
-    #hojita{
-    top: 182px;
-    left: -10px;
-    }
-    #chilemorron{
-        top: 280px;
-        left: 10px;
-        height: 60px;
-    }
-    #mymelody{
-        position: fixed;
-        height: 120px;
-        left: -21px;
-        bottom: -11px;
-    }
-    #panda{
-        bottom: 15px;
-        height: 50px;
-        left: 20px;
-    }
-    #monitachina{
-        top: 463px;
-    }
-    #burguer-cat{
-        top: -330px;
-        left: 420px;
-        height: 60px;
-    }
-    #carrot-bunny{
-        height: 80px;
-        top: 660px;
-        left: 370px;
-    }
-    #ramen{
-        height: 70px;
-        top: -90px;
-        right: -480px;
-    }
-    #heart2{
-        height: 50px;
-        right: 1px;
-        top: 200px;
-    }
-    #ice-cream{
-        height: 60px;
-        top: -30px;
-        left: -20px;
-    }
-    #hearts{
-        height: 190px;
-        top: 111px;
-        left: 10px;
-    }
-    #heart-cat{
-        height: 50px;
-        right: 20px;
-        top: 785px;
-    }
-    #profile-leaf{
-        left: 7px;
-        top: -3px;
-    }
-    #sleepin-cat{
-        top:900px;
-    }
+    
 }
